@@ -27,9 +27,10 @@ static void do_fibo(int n) {
 		end_time.tv_nsec += 1000*1000*1000;
 		end_time.tv_sec -= 1;
 	}
-	long long diff_time_msec = 1000*(end_time.tv_sec - sta_time.tv_sec) + (end_time.tv_nsec - sta_time.tv_nsec) / (1000*1000);
-	printf("[%lld.%03lld] fibo(%d) = %d\n", diff_time_msec / 1000, diff_time_msec % 1000,
-		   n, result_fibo);
+	long long diff_time_usec = 1000*1000*(end_time.tv_sec - sta_time.tv_sec)
+		+ (end_time.tv_nsec - sta_time.tv_nsec) / (1000);
+	printf("[%lld.%06lld] fibo(%d) = %d\n", diff_time_usec / (1000*1000),
+		   diff_time_usec % (1000*1000), n, result_fibo);
 
 }
 
@@ -37,5 +38,6 @@ int main(int argc, char *argv[]){
 	do_fibo(38);
 	do_fibo(39);
 	do_fibo(40);
+	do_fibo(41);
 	return 0;
 }

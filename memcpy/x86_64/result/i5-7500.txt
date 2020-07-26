@@ -1,0 +1,20 @@
+### 32KB ###
+[0.028494] memcpy
+[0.013007] memcpy_linux_simple
+[0.014842] memcpy_linux_orig
+[0.006358] memcpy_linux_erms
+### 256KB ###
+[0.007926] memcpy
+[0.007934] memcpy_linux_simple
+[0.012867] memcpy_linux_orig
+[0.007934] memcpy_linux_erms
+### 2MB ###
+[0.009171] memcpy
+[0.009131] memcpy_linux_simple
+[0.014071] memcpy_linux_orig
+[0.009098] memcpy_linux_erms
+### 16MB ###
+[0.018461] memcpy
+[0.030870] memcpy_linux_simple
+[0.029135] memcpy_linux_orig
+[0.030845] memcpy_linux_erms

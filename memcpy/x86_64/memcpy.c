@@ -27,6 +27,7 @@
 #define TEST(func,dst,src,len)					\
 	do {										\
 		memset (dst,0x5a,len);					\
+		memset (src,0xa5,len);					\
 		CALCTIME(func,dst,src,len);				\
 	} while(0)
 
@@ -40,6 +41,9 @@ static void my_main(size_t len) {
 	q = malloc(len);
 
 	TEST(memcpy,p,q,len);
+	TEST(memcpy_linux_simple,p,q,len);
+	TEST(memcpy_linux_orig,p,q,len);
+	TEST(memcpy_linux_erms,p,q,len);
 
 	free(q);
 	free(p);

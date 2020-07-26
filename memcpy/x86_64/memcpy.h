@@ -8,3 +8,6 @@
 		}													\
 	} while(0)
 
+extern void *memcpy_linux_simple(void *dest, const void *src, size_t n);
+extern void *memcpy_linux_orig(void *dest, const void *src, size_t n);
+extern void *memcpy_linux_erms(void *dest, const void *src, size_t n);

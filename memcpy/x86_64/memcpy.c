@@ -10,7 +10,6 @@
 #define CALCTIME(SNAME, ...)											\
 	do {																\
 		struct timespec sta_ts, end_ts;									\
-		long diff_usec;													\
 		SYSCALLWRAP(clock_gettime, CLOCK_MONOTONIC, &sta_ts);			\
 		for(size_t i=0; i<TESTLEN()/MALLOCLEN(); i++) {					\
 			SNAME(__VA_ARGS__);											\

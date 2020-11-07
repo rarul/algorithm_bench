@@ -1,13 +1,6 @@
 #include  <stdio.h>
 #include  <time.h>
 
-static void time_calc_sta(struct timespec *ts){
-	clock_gettime(CLOCK_MONOTONIC, ts);
-}
-static void time_calc_end(struct timespec *sta_ts, const char *msg){
-	struct timespec end_ts;
-	clock_gettime(CLOCK_MONOTONIC, &end_ts);
-}
 static int val_fibo(int n) {
 	if (n < 2) {
 		return n;
@@ -34,7 +27,7 @@ static void do_fibo(int n) {
 
 }
 
-int main(int argc, char *argv[]){
+int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused))){
 	do_fibo(38);
 	do_fibo(39);
 	do_fibo(40);

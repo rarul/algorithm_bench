@@ -25,7 +25,7 @@ $(INSTALL_EACH): all
 	mkdir -p $(INSTALLDIR);						\
 	cp $$myself $(INSTALLDIR)
 
-clean:
+clean::
 	$(RM) -f $(TARGETS) *.o 
 
 .gitignore: $(TARGETS)

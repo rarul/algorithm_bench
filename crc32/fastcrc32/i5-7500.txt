@@ -1,0 +1,15 @@
+Ubuntu20.04
+
+Please wait ...
+bitwise          : CRC=221F390F, 9.471s, 108.119 MB/s
+half-byte        : CRC=221F390F, 4.623s, 221.509 MB/s
+tableless (byte) : CRC=221F390F, 4.385s, 233.504 MB/s
+tableless (byte2): CRC=221F390F, 4.211s, 243.162 MB/s
+  1 byte  at once: CRC=221F390F, 2.289s, 447.435 MB/s
+  4 bytes at once: CRC=221F390F, 0.775s, 1320.623 MB/s
+  8 bytes at once: CRC=221F390F, 0.543s, 1887.217 MB/s
+4x8 bytes at once: CRC=221F390F, 0.412s, 2486.371 MB/s
+ 16 bytes at once: CRC=221F390F, 0.264s, 3879.052 MB/s
+ 16 bytes at once: CRC=221F390F, 0.237s, 4324.978 MB/s (including prefetching)
+    chunked      : CRC=221F390F, 0.263s, 3889.400 MB/s
+
